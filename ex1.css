@@ -1,0 +1,70 @@
+ .Main {
+    font-style: italic;
+    color: black;
+    background-color:blueviolet;
+    display:inline;
+    text-align: center;
+}
+
+body{
+    background-image:linear-gradient(to right,pink,rgb(236, 101, 101));
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+p{
+    color: darkred ;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.menu{
+    text-decoration: none;
+    color:white ;
+    background-color: black;
+    border: 1px solid red;
+    display:flow-root;
+}
+li{
+    text-decoration: none;
+    display: inline-block;
+    text-indent: 20px;
+    border-spacing: 20px;
+}
+table {
+    width: 50%;
+    margin-left: auto;
+    margin-right:auto ;
+    border-collapse: collapse;
+    border-radius: 15px ;
+    border: 1px solid;
+    border-style: dashed;
+    border-color: red;
+}
+tr:nth-child(even) {
+    background-color: rgba(4, 31, 31, 0.4);
+  }
+  
+  th:nth-child(even),td:nth-child(even) {
+    background-color: rgba(40, 119, 119, 0.4);
+  }
+
+.bar{
+    background-image: linear-gradient(to left, black,red);
+}
+  
+td,tr,thead{
+    border-color: rgb(179, 17, 17);
+    border: 1px dashed;
+    background-color: black;
+    color: white;
+}
+
+.t1{
+    background-image: linear-gradient(to right,blue,purple);
+}
