@@ -1,0 +1,137 @@
+/* Reset some default styles for consistency */
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+    margin: auto;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image:linear-gradient(to right,rgb(165, 110, 110),rgb(175, 4, 4))
+  }
+.l:hover{
+    background-color: rgb(73, 39, 39);
+    font-size: large;
+    box-shadow: 1px 3px 1px 0px  brown;
+}
+  .center{
+    margin: auto;
+    width: 50%;
+    border: 3px solid white;
+    padding: 10px;
+  }
+  
+  /* Header styles */
+  header {
+    color: rgb(252, 101, 101);
+    text-align: center;
+    padding: 1rem 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Section styles */
+  section {
+    margin: 2rem;
+  }
+  
+  /* Element Transformations */
+  .transform-box,.l-r {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(99, 235, 147);
+    color: brown;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .transform-box:hover {
+    transform: rotateX(150deg);
+  }
+  .l-r:hover{
+    transform: rotatey(150deg);
+  }
+  /* Transitions */
+  .transition-button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+  
+  .transition-button:hover {
+    background-color: orange;
+    color: black;
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Animations */
+  .animation-box {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius:50% ;
+    background-image: linear-gradient(to right,black,white);
+    animation: bounce 1s infinite alternate-reverse;
+  }
+
+  .an{
+    margin:auto;
+    width: 100px;
+    height: 100px;
+    border-radius:50% ;
+    position:relative;
+    background-image:radial-gradient(pink,green,violet);
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-duration:5s;
+  }
+  
+  @keyframes move {
+    0%   {left:0px; top:0px;}
+    25%  {left: 200px;top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+
+    from{
+      transform: rotatez(0deg);
+    }
+    to{
+      transform: rotateZ(250deg);
+    }
+
+  }
+  @keyframes bounce {
+    from {
+      transform: translateY(20px);
+    }
+    to {
+      transform: translateY(-20px);
+      transform: rotateZ(150deg);
+    }
+  }
+  
