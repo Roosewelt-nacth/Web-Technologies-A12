@@ -16,6 +16,12 @@ body{
     width: 50%;
     
 }
+
+img:hover{
+    will-change: filter;
+    transition: filter 100ms;
+    filter: drop-shadow(0 0 2em darkred);
+}
 p{
     color: darkred ;
 }
@@ -29,6 +35,7 @@ a{
     background-color: black;
     border: 1px solid red;
     display:flow-root;
+    cursor:pointer;
 }
 li{
     text-decoration: none;
@@ -58,7 +65,7 @@ tr:nth-child(even) {
     background-image: linear-gradient(to left, black,red);
 }
   
-td,tr,thead{
+td,tr{
     border-color: rgb(179, 17, 17);
     border: 1px dashed;
     background-color: black;
