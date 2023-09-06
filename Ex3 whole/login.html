@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function validate(){
+            var username;
+            var pass;
+            username=document.getElementById("Username").value;
+            pass=document.getElementById("pass").value;
+            username=username.toString();
+            regexp= /^[0-9]/;
+            start=username.charAt(0);
+            if(regexp.test(start)==false)
+            {
+                if (typeof username === 'string') 
+                {
+                    var searchResult = username.search('@');
+                    if(searchResult==-1){
+                        alert("Invalid Username");
+                        document.getElementById('Username').focus;
+                    }
+                    else{
+                        alert('Valid');
+                        window.location.href="form.html";
+                    }
+                } 
+                else{
+                    console.error('Invalid username not in string', username);
+                }
+            }
+            else {
+                    alert('Invalid: username cannot start with number', username);
+                }
+            var position = username.search('@');
+            console.log(position);      
+    }
+    </script>
+</head>
+<body>
+    
+        <input type="text" id="Username" placeholder="Enter the username:"><br>
+        <input type="password" id="pass" placeholder="Enter the password: ">
+        <input type="button" onclick="validate()" value="Submit"> 
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Bar</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        
+        /* Basic CSS for the menu bar */
+        ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Background color for the menu bar */
+        }
+
+        li.menu-item {
+            display: inline-block;
+            margin-right: 20px; /* Adjust the spacing between menu items */
+        }
+
+        a.menu-link {
+            font-size: 20px;
+            text-decoration: none;
+            color: white; /* Text color for the menu items */
+        }
+
+        /* Style for the hover effect */
+        li.menu-item:hover {
+            background-color: #555; /* Background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu-item"><a class="menu-link" href="login.html" target="content">Login</a></li>
+        <li class="menu-item"><a class="menu-link" href="form.html" target="content">Form</a></li>
+        <li class="menu-item"><a class="menu-link" href="#">Item 3</a></li>
+        <li class="menu-item"><a class="menu-link" href="#">Item 4</a></li>
+    </ul>
+</body>
+</html>
