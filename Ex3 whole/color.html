@@ -20,8 +20,6 @@
         const selectedColor = colorPicker.value;
         // Add an event listener to the color picker input
         colorPicker.addEventListener("input", function () {
-
-            // Check if the selected color is a valid hexadecimal color code
             if (!isValidHexColor(selectedColor)) {
                 colorPicker.setCustomValidity("Please select a valid color.");
             } else {

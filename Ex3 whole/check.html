@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: white;
+        }
+    </style>
+      <script>
+        function validateCheckboxes() {
+          const checkboxes = document.querySelectorAll('input[name="options[]"]:checked');
+          if (checkboxes.length < 2) {
+            alert("Please select at least two options.");
+            return false;
+          }
+          else{
+            alert("Inserted and checked!")
+            return true;
+          }
+        }
+      </script>
+      
+</head>
+<body>
+    <form onsubmit="return validateCheckboxes()">
+        <label>Select at least two places:</label><br>
+        <input type="checkbox" id="option1" name="options[]" value="option1">
+        <label for="option1">Chennai</label><br>
+        <input type="checkbox" id="option2" name="options[]" value="option2">
+        <label for="option2">Trichy</label><br>
+        <input type="checkbox" id="option3" name="options[]" value="option3">
+        <label for="option3">Madurai</label><br>
+        <input type="submit" value="Submit">
+      </form>
+      
+</body>
+</html>
