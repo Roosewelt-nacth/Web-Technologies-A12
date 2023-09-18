@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <!-- Embedded style sheet (or) Internal Style Sheet -->
+ <html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Embedded Style Sheet</title>
+
+        <!-- this begins the style sheet section -->
+
+        <style type = "text/css">
+            em { font-weight: bold; color: black; } /*CSS Selector*/
+            h1 { font-family: tahoma, helvetica, sans-serif; }
+            p { font-size: 12pt; font-family: arial, sans-serif; }
+            mytag { color: red;}
+            .special { color: purple; }  /*selector for style class, use #element for ids*/
+            .sp{color:antiquewhite;}  
+        </style>
+
+    </head>
+    <body>
+        <!-- this attribute applies the .special style class -->
+        <h1 class = "special"> Deitel & Associates, Inc. </h1>
+
+        <p>Deitel & Associates, Inc. is an authoring and
+        corporate training organization specializing in
+        programming languages, Internet and web technology,
+        iPhone and Android app development, and object
+        technology education.</p>
+        <mytag>This is mytag</mytag>
+        <h1 class="sp">Clients</h1>
+        <p class = "special"> The company's clients include many
+        <em>Fortune 1000 companies</em>, government agencies,
+        branches of the military and business organizations.</p>
+    </body>
+</html>
+
+
+
+<!--
+
+MIME type       Description
+text/css        CSS documents
+image/png       PNG images
+text/javascript JavaScript markup
+text/plain      Plain text
+image/jpeg      JPEG image
+text/html       HTML markup
+
+Generic font families   Examples
+serif                   times new roman, georgia
+sans-serif              arial, verdana, futura
+cursive                 script
+fantasy                 critter
+monospace               courier, fixedsys
+
+selectors -> class and ID
+-->

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Adding background images and indentation -->
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Background Images</title>
+        <style type = "text/css">
+            body { 
+                background-image: url(images/logo.png);
+                /* absolute path and relative path */
+                background-position: bottom right;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                background-color: lightgrey; 
+                }
+                p { 
+                    font-size: 18pt;
+                    color: Darkblue;
+                    text-indent: 1em;
+                    font-family: arial, sans-serif; 
+                    }
+                .dark { font-weight: bold; }
+        </style>
+    </head>
+    <body>
+            <p>
+            This example uses the background-image,
+            background-position and background-attachment
+            styles to place the <span class = "dark">Deitel
+                & Associates, Inc.</span> logo in the
+            bottom-right corner of the page. Notice how the logo
+            stays in the proper position when you resize the
+            browser window. The background-color fills in where
+            there is no image.
+            </p>
+    </body>
+ </html>
+
+ <!--Element Dimensions
+<p style = "width: 20%; height: 150px; overflow: scroll">
+    -->
+
+<!-- <img src="picture.jpg">	The "picture.jpg" file is located in the same folder as the current page
+<img src="images/picture.jpg">	The "picture.jpg" file is located in the images folder in the current folder
+<img src="/images/picture.jpg">	The "picture.jpg" file is located in the images folder at the root of the current web
+<img src="../picture.jpg">	The "picture.jpg" file is located in the folder one level up from the current folder -->

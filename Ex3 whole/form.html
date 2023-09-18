@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Color Picker Validation</title>
+    <style>
+        body{
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <p id="val">To know what to click</p>
-        <input type="checkbox" name="yes" id="yes" >
-        <input type="radio" name="no" id="no">
-    </div>
+    
+        <label for="colorPicker">Select a color:</label>
+        <input type="color" id="colorPicker" name="colorPicker" required>
+        <input type="submit" value="Submit" onclick="cha">
+    
+
+    <script>
+        const colorPicker = document.getElementById("colorPicker");
+        const selectedColor = colorPicker.value;
+        // Add an event listener to the color picker input
+        colorPicker.addEventListener("input", function () {
+
+            // Check if the selected color is a valid hexadecimal color code
+            if (!isValidHexColor(selectedColor)) {
+                colorPicker.setCustomValidity("Please select a valid color.");
+            } else {
+                colorPicker.setCustomValidity("");
+            }
+        });
+
+        // Function to validate if a color is a valid hexadecimal color code
+        function isValidHexColor(color) {
+            const hexColorRegex = /^#[0-9A-Fa-f]{6}$/;
+            return hexColorRegex.test(color);
+        }
+        function cha(){
+            document.getElementById('body').style.color=selectedColor;
+        }
+    </script>
 </body>
 </html>

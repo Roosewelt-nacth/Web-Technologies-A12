@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Absolute positioning of elements. -->
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Absolute Positioning</title>
+        <style type = "text/css">
+            .background_image { 
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 2; 
+            }
+        
+            .foreground_image { 
+                position: absolute;
+                top: 25px;
+                left: 100px;
+                z-index: 1; 
+            }
+        
+            .text { 
+                position: absolute;
+                top: 25px;
+                left: 10px;
+                z-index: 3;
+                font-size: 20pt;
+                font-family: tahoma, geneva, sans-serif; 
+            }
+        </style>
+    </head>
+    <body>
+        <p class = "text">Positioned Text</p>
+
+        <p><img src = "images/foreground_image.jpg" class = "foreground_image"
+            alt = "Second positioned image" /></p>
+
+        <p><img src = "images/background_image.jpg" class = "background_image"
+        alt = "First positioned image" /></p>
+        
+        
+
+        <!-- <p class = "text">Positioned Text</p> -->
+    </body>
+ </html>

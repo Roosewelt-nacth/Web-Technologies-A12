@@ -1,0 +1,158 @@
+<!-- Exception Handling -->
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Exception Handling</title>
+   </head>
+   <body> 
+
+        <p id="dm"> </p>
+
+        <script lang="javascript" type="text/javascript">
+            function c1(){
+                try {
+                    handled("Great to be here!");
+                }
+                catch(er) {
+                    document.getElementById("dm").innerHTML = er.message;
+                }
+            }
+
+
+            function c2() {
+                var mesg, elem;
+                mesg = document.getElementById("dm");
+                mesg.innerHTML = "";
+                elem=prompt("Give an input!", "");
+                try {
+                    if(elem == "") throw "empty";
+                    if(isNaN(elem)) throw "not a number";
+                    elem = Number(elem);
+                    if(elem < 5) throw "too low";
+                    if(elem > 10) throw "too high";
+                }
+                catch(er) {
+                    mesg.innerHTML = "Input is " + er;
+                }
+                finally {
+                    alert("Works Always");
+                }
+            }
+
+            function c3(){
+                var num = 2.2233;
+                try {
+                    /* num.toPrecision(567); */
+                    var n = num.toExponential(1);
+					document.getElementById("dm").innerHTML = n;
+                }
+                catch(er) {
+                    document.getElementById("dm").innerHTML = er.name;
+                }
+
+            }
+            function c4(){
+                var v1;
+                try {
+                v1 = v2 * 14;
+                }
+                catch(er) {
+                document.getElementById("dm").innerHTML = er.name;
+                }
+
+            }
+
+            function c5(){
+                try {
+                    eval("alert(Hello')");
+                }
+                catch(er) {
+                    document.getElementById("dm").innerHTML = er.name;
+                } 
+
+            }    
+            function c6(){
+                var e=90;
+                try {
+                    e.toUpperCase();
+                }
+                catch(er) {
+                    document.getElementById("dm").innerHTML = er.name;
+                } 
+
+            }  
+
+            function c7(){
+                var uri,enc,dec;
+                try {
+                        uri = "my test.asp?name=apple&cat=aabba";
+                        enc = encodeURI(uri);
+                        dec = decodeURI(enc);  
+                        dec = decodeURI("%");
+                }
+                catch(er) {
+                    document.getElementById("dm").innerHTML = er.name;
+                } 
+
+            }  
+
+            function c8() {
+               var a = 100;
+               var b = prompt("Give an input!", "");
+               var c=0;
+               
+               try {
+                  if ( b == 0 ) {
+                     throw( "Divide by zero error" ); 
+                  } 
+                  else {
+                     c = a / b;
+                     document.getElementById("dm").innerHTML = c;
+                  }
+               }
+               catch ( er ) {
+                document.getElementById("dm").innerHTML = er;
+                //alert("Error: " + e );
+               }
+            }
+
+
+
+            
+
+
+
+        </script>
+       <form name="valform">
+<!--            Login: <input type="text" name="uname"> <br /><br />
+           Password:<input type="password" name="passw"> <br /><br />
+           <input type="reset" value="Reset" onClick="return res();"> &nbsp;&nbsp;  -->
+           <input type="button" value="Default Handling" onClick="c1();"> &nbsp;&nbsp;
+           <input type="button" value="Try Catch Throw" onClick="c2();"> &nbsp;&nbsp;
+           <input type="button" value="Range Error" onClick="c3();"> &nbsp;&nbsp;
+           <input type="button" value="Ref Error" onClick="c4();"> &nbsp;&nbsp;
+           <input type="button" value="Syn Error" onClick="c5();"> &nbsp;&nbsp;
+           <input type="button" value="Type Error" onClick="c6();"> &nbsp;&nbsp;
+           <input type="button" value="URI Error" onClick="c7();"> &nbsp;&nbsp;
+           <input type="button" value="UDefined" onClick="c8();"> &nbsp;&nbsp;
+       </form> 
+   </body>
+</html>
+
+
+<!-- Error Object
+------------
+JavaScript has a built in error object that provides 
+error information when an error occurs.
+The error object provides two useful properties: 
+name and message
+
+Error Name	    Description
+----------------------------
+EvalError	    An error has occurred in the eval() function
+RangeError	    A number "out of range" has occurred
+ReferenceError	An illegal reference has occurred
+SyntaxError	    A syntax error has occurred
+TypeError	    A type error has occurred
+URIError	    An error in encodeURI() has occurred
+ -->

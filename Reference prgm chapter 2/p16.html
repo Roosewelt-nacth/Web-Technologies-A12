@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <title>JSON Example 2</title>
+    <body>
+
+        <h2>Creation of JSON Nested Objects</h2>
+
+        <p id="d1"></p>
+        <p id="d2"></p>
+
+        <script>
+            var obj =   {     
+                            "Student":
+                            {
+                                "name":"Paul",
+                                "age": 18,
+                                "regno":4032,
+                                "subjects":
+                                {
+                                    "core":"maths",
+                                    "elective":"MADL"
+                                }
+                            }
+                        };  
+            document.writeln("<h3>Student Details</h3>");
+            document.writeln("<h4>Name</h4>"+obj.Student.name);
+            document.writeln("<h4>Age</h4>"+obj.Student.age);
+            document.writeln("<h4>Core Subject:</h4>"+obj.Student.subjects.core);
+            document.writeln("<h4>Elective:</h4>"+obj.Student.subjects.elective);
+        </script>
+
+    </body>
+</html>

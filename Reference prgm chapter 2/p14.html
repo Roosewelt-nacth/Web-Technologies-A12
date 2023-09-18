@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <title>JSON Example 1</title>
+    <body>
+
+        <h2>Creation of JSON Object</h2>
+
+        <p id="d1"></p>
+        <p id="d2"></p>
+
+        <script>
+            var obj = { name: "Rock", age: 30, city: "Wuhuang" };
+           
+            document.getElementById("d1").innerHTML = obj.age+"  "+obj.city+"  "+obj.name;
+
+            var myJSON = JSON.stringify(obj);
+            document.getElementById("d2").innerHTML = myJSON;
+
+        </script>
+
+    </body>
+</html>

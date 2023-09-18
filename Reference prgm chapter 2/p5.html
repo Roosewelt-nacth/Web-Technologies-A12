@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Scoping example. -->
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Scoping Example</title>
+        <style type = "text/css">
+            p { margin: 0px; }
+            p.space { margin-top: 10px; }
+        </style>
+        
+        <script>
+            var output; // C1101
+            var x = 1; //B1101E
+            
+            function start()
+            {
+                var x = 5; // variable local to function start , x - AC1110 
+                output = "<p>local x in start is " + x + "</p>";
+                functionA(); // functionA has local x
+                functionB(); // functionB uses global variable x
+                functionA(); // functionA reinitializes local x
+                functionB(); // global variable x retains its value
+                output += "<p class='space'>local x in start is " + x + "</p>";
+                document.getElementById( "results" ).innerHTML = output;
+            } // end function start
+            
+            function functionA()
+            {
+                var x = 25; // x - C110
+                output += "<p class='space'>local x in functionA is " + x +
+                " after entering functionA</p>";
+                ++x;
+                output += "<p>local x in functionA is " + x +
+                " before exiting functionA</p>";
+            } // end functionA
+            
+            function functionB()
+            {
+                output += "<p class='space'>global variable x is " + x +
+                " on entering functionB";
+                x *= 10;
+                output += "<p>global variable x is " + x +
+                " on exiting functionB</p>";
+            } 
+            // end functionB
+            // window.addEventListener("load", start, false);
+        </script>
+    </head>
+    <body onload="start();"> 
+        <div id = "results"></div>
+    </body>
+</html>
+
+<!--Some of the other global functions
+DOM
+
+isFinite
+isNaN
+parseFloat
+parseInt
+
+if(isNaN)
+else
+-->

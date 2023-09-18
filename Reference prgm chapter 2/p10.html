@@ -1,0 +1,61 @@
+<!-- Basic Arrays and related functionalities in Javascript -->
+
+<html>
+   <head>
+      <title>JavaScript String Manipulation</title>
+   </head>
+   
+   <body>  
+      <script type = "text/javascript">
+         
+         var dataArray = new Array(5);
+         dataArray[0]="Movie";
+         dataArray[1]=555; 
+         dataArray[2]=7.89;
+         dataArray[3]="Hello FM";
+         dataArray[4]="434";
+
+         document.write("Length of Array is:" + dataArray.length + "<br />");
+
+         for(var c=0;c<5;c++)
+         {
+            document.write("Array value at pos " + c + " is :"+ dataArray[c] + "<br />" );   
+         }
+
+         dataArray[4]+=45;
+
+         document.write("<br /> After 1st Modification <br />")
+         for(var c=1;c<5;c++)
+         {
+            document.write("Array value at pos " + c + " is :"+ dataArray[c] + "<br />" );   
+         }
+
+
+         dataArray[2]+=45;
+         dataArray[1]+=45;
+
+         document.write("<br /> After 2nd Modification <br />")
+         for(var c=0;c<dataArray.length;c++)
+         {
+            document.write("Array value at pos " + c + " is :"+ dataArray[c] + "<br />" );   
+         }
+
+         // To remove an element from the array
+
+         var elem=prompt("What element to remove?", "");
+         for(var c=0;c<dataArray.length;c++)
+         {
+            if(dataArray[c]==elem)
+            {
+               dataArray[c]=dataArray[c+1];   
+            }
+         }
+         
+         document.write("<br /> After removal of element <br />" );   
+         for(var c=0;c<dataArray.length;c++)
+         {
+            document.write("Array value at pos " + c + " is :"+ dataArray[c] + "<br />" );   
+         }
+      </script>      
+   </body>
+</html>

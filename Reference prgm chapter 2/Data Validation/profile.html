@@ -1,0 +1,75 @@
+<html>
+    <body bgcolor="pink"><br><br>
+        <script language="javascript">
+            function validate()
+            {
+                var flag=1;
+                if(document.myform.name.value==""||document.myform.addr.value==""||document.myform.phno.value==""||document.myform.id.value==""||document.myform.pwd.value=="")
+                {
+                    flag=0;
+                }
+                var str=document.myform.phno.value;
+                var x;
+                for(var i=0;i<str.length;i++)
+                {
+                    x=str.substr(i,1);
+                    if(!(x<=9))
+                    {
+                        flag=0;
+                        break;
+                    }
+                }
+                if(flag==1)
+                {
+                    alert("VALID INPUT");
+                }
+                else
+                {
+                    alert("INVALID INPUT");
+                    document.myform.focus();
+                }
+            }
+        </script>
+        <form name="myform">
+            <table>
+                <tr>
+                    <td width="200">Name</td> 
+                    <td>:<input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td width="200">Address</td> 
+                    <td>:<input type="text" name="addr"></td>
+                </tr>
+                <tr>
+                    <td width="200">Contact Number:</td> 
+                    <td>:<input type="text" name="phno"></td>
+                </tr>
+                <tr>
+                    <td width="200">Login ID:</td> 
+                    <td>:<input type="text" name="id"></td>
+                </tr>
+                <tr>
+                    <td width="200">Passoword:</td> 
+                    <td>:<input type="password" name="pwd"></td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td align="right"><input type="submit" value="ok" onClick="validate()"></td> 
+                    <td><input type="reset" value="clear"></td>
+                </tr>
+
+            </table>
+<!--         <div align="left">
+        NAME :<input type="text" name="name"><br> ADDRESS :<input type="type" name="addr"><br>
+        CONTACT NUMBER:<input type="text" name="phno"><br> 
+        LOGIN ID :<input type="text" name="id">
+        <br>
+        PASSWORD :<input type="password" name="pwd"><br><br>
+        </div> 
+        <br><br>
+        <div align="center">
+        <input type="submit" value="ok" onClick="validate()">&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="clear">-->
+        </form>
+    </body>
+</html>
