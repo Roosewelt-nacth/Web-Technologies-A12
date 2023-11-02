@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .forms input,label{
+            display: block;
+            color: white;
+        }
+        #submitt{
+            background-color: rgb(10,102,194);
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 50px;
+            padding-right: 50px;
+            margin-left: 4px;
+            margin-right: 4px;
+            font-weight: bold;
+        }
+        #submitt:hover{
+            background-color:  rgb(0, 128, 255);
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="get" class="forms">
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="18" max="100" required><br>
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">I agree to the terms and conditions</label>
+        <input type="submit" value="Submit" id="submitt">        
+    </form>
+</body>
+</html>
